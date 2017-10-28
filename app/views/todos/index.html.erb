@@ -1,0 +1,13 @@
+<h1> Index - ToDo List </h1>
+
+<%= link_to 'Crear ToDo', todos_new_path %>
+
+<% @todos.each do |todo| %>
+  <div class="well">
+    <p> Descripción: <%= todo.description %> </p>
+    <p> Completado?: <p> <%= todo.completed %> </p>
+    <p> <%= link_to 'Detalle', todo %> </p>
+    <p> <%= link_to 'Editar', edit_path(todo.id) %> </p>
+    <p> <%= link_to 'Borrar', delete_path(todo.id), method: :delete %> </p>
+  </div>
+<% end %>

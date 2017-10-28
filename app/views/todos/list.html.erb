@@ -1,0 +1,21 @@
+<h1> List </h1>
+
+<div class="col-md-6">
+  <h2> ToDo's Completos </h2>
+  <% @completed.each do |todo| %>
+    <div class="well">
+      <p> Descripción: <%= todo.description %> </p>
+      <p> Completado?: <p> <%= todo.completed %> </p>
+    </div>
+  <% end %>
+</div>
+
+<div class="col-md-6">
+  <h2> ToDo's Incompletos </h2>
+  <% @uncompleted.each do |todo| %>
+    <div class="well">
+      <p> Descripción: <%= todo.description %> </p>
+      <p> Completado?: <p> <%= todo.completed %> </p>
+    </div>
+  <% end %>
+</div>
